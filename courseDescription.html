@@ -17,6 +17,15 @@
 			);	
 		});		
 	});
+        
+        // show course description according to the course selected
+	$(document).ready(function(){
+		$("#course").change(function(){
+			course=$("#course").val();
+			var file=course+".html";
+			$("#iframe_couredescription").attr("src", file );
+		});
+	});
         </script>
 </head>
 
