@@ -1,0 +1,22 @@
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.icenter{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#selectCourse{
+    padding-left: 5%;
+    padding-bottom: 20px;
+}
