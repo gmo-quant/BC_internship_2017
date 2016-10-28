@@ -2,6 +2,22 @@
 <html>
 <head>
 	<title>Course Description</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            	// retrive course list 
+	
+	//store course list in array
+	var courseList = ["ENC1101", "MAC1105", "CIS1000C", "COP1210C"];
+
+	// append option to select list dynamically
+	$(document).ready(function(){	
+		$.each(courseList, function(index, value){
+			$("#course").append(
+				$("<option></option>").attr("value",value).text(value)
+			);	
+		});		
+	});
+        </script>
 </head>
 
 <body>
@@ -21,7 +37,6 @@
 	-->
 	<div id="selectCourse">	
 		<select id="course" >
-                    <option value="ENC1101">ENC1101</option>
 		</select>
 	</div>
 	
