@@ -21,8 +21,9 @@
         // show course description according to the course selected
 	$(document).ready(function(){
 		$("#course").change(function(){
+                        var dir = "courseDescription/";
 			course=$("#course").val();
-			var file=course+".html";
+			var file=dir + course+".html";
 			$("#iframe_couredescription").attr("src", file );
 		});
 	});
@@ -46,6 +47,7 @@
 	-->
 	<div id="selectCourse">	
 		<select id="course" >
+                    <option value="default">select a course here</option>
 		</select>
 	</div>
 	
@@ -54,7 +56,7 @@
 		show the course description for selected course
 	-->
 	<div id="showDescription">
-		<iframe id="iframe_couredescription" src="ENC1101.html"></iframe>
+		<iframe id="iframe_couredescription"></iframe>
 	</div>
 	
 	<!-- 
