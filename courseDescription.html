@@ -17,17 +17,8 @@
 	
 	//store course list in array
 	var courseList = ["ENC1101", "MAC1105", "CIS1000C", "COP1210C"];
-	// append option to select list dynamically
-	$(document).ready(function(){	
-            $.each(courseList, function(index, value){
-                $("#leftmenuinner").append(
-                        $("<a></a>").attr("id",value)
-                        .attr("href","javascript:void();")
-                        .attr("onclick","javascript:showDescription(this);")
-                        .text(value)
-                );	
-            });		
-	});
+        var degreeList = ["AS", "CS", "BS"];
+	
         
         // show course description according to the course selected
         function showDescription(courseID){
@@ -36,6 +27,33 @@
             var file=dir + ID +".html";
             $("#iframe_couredescription").attr("src", file );
 
+        }
+        
+        function showDegrees(){
+            // append option to select list dynamically
+            $(document).ready(function(){	
+                $.each(degreeList, function(index, value){
+                    $("#leftmenuinner").append(
+                            $("<a></a>").attr("id",value)
+                            .attr("href","javascript:void();")
+                            .attr("onclick","javascript:showCourses();")
+                            .text(value)
+                    );	
+                });		
+            });
+        }
+        function showCourses(){
+            // append option to select list dynamically
+            $(document).ready(function(){	
+                $.each(courseList, function(index, value){
+                    $("#leftmenuinner").append(
+                            $("<a></a>").attr("id",value)
+                            .attr("href","javascript:void();")
+                            .attr("onclick","javascript:showDescription(this);")
+                            .text(value)
+                    );	
+                });		
+            });
         }
         </script>
 
@@ -61,6 +79,7 @@
     <div id="sidenav" class="sidenav">
         <div id="leftmenu" class="leftmenu">
             <div id="leftmenuinner">
+                <h2 onclick="showDegrees();">Course Degrees</h2>
                 <h2>Course List</h2>
             </div>
 
