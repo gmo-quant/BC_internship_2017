@@ -2,71 +2,83 @@
 <html>
 <head>
 	<title>Course Description</title>
+        
         <link rel="stylesheet" href="CSS/courseDescription.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
-            	// retrive course list 
+        // retrive course list 
 	
 	//store course list in array
 	var courseList = ["ENC1101", "MAC1105", "CIS1000C", "COP1210C"];
-
 	// append option to select list dynamically
 	$(document).ready(function(){	
-		$.each(courseList, function(index, value){
-			$("#course").append(
-				$("<option></option>").attr("value",value).text(value)
-			);	
-		});		
+            $.each(courseList, function(index, value){
+                $("#leftmenuinner").append(
+                        $("<a></a>").attr("id",value)
+                        .attr("href","javascript:void();")
+                        .attr("onclick","javascript:showDescription(this);")
+                        .text(value)
+                );	
+            });		
 	});
         
         // show course description according to the course selected
-	$(document).ready(function(){
-		$("#course").change(function(){
-                        var dir = "courseDescription/";
-			course=$("#course").val();
-			var file=dir + course+".html";
-			$("#iframe_couredescription").attr("src", file );
-		});
-	});
+        function showDescription(courseID){
+            var ID = courseID.id;
+            var dir = "courseDescription/";
+            var file=dir + ID +".html";
+            $("#iframe_couredescription").attr("src", file );
+
+        }
         </script>
+
 </head>
 
-<body class="center">
-	<header id="title">
-	   <h1>Course Description</h1>
-	</header>
-	<!--
-		include the shared navigation bar using jquery	
-	-->
-	<div id="header"> 
-		<p>header</p>
-	</div>
-	
-	<!--
-		option list	
-		select which course description to show
-	-->
-	<div id="selectCourse">	
-		<select id="course" >
-                    <option value="default">select a course here</option>
-		</select>
-	</div>
-	
-	<!-- 
-		showDescription		
-		show the course description for selected course
-	-->
-	<div id="showDescription">
-		<iframe id="iframe_couredescription" class="icenter">       
-                </iframe>
-	</div>
-	
-	<!-- 
-		include the shared footer using jquery
-	-->
-	<div id="footer">
-		<p>footer</p>
-	</div>
+<body>
+    <div>
+        <div>
+            <h1>Course Description</h1>
+        </div>
+    </div>
+    
+    <div class="topnav" id="topnav" style="position: relative; top:0px;">
+        <div style="overflow:auto">
+            <ul style="width:55%;height:44px">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Course Description</a></li>
+                <li><a href="#">Degree Programs</a></li>
+            </ul>
+        </div>
+    </div>	   
+    
+    <div id="sidenav" class="sidenav">
+        <div id="leftmenu" class="leftmenu">
+            <div id="leftmenuinner">
+                <h2>Course List</h2>
+            </div>
+
+        </div>
+    </div>
+    
+    <div id="belowtopnav" style="margin-left:220px; padding-top: 0px;">
+        <!-- show description dynamically-->
+        <div id="showDescription">
+                <iframe id="iframe_couredescription"></iframe>
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <hr>
+            <p>footer</p>
+    </div>
 	
 
 </body>
