@@ -13,13 +13,10 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
-        // retrive course list 
-	
+        // retrive course list 	
 	//store course list in array
 	var courseList = ["ENC1101", "MAC1105", "CIS1000C", "COP1210C"];
-        var degreeList = ["AS", "CS", "BS"];
-	
-        
+        var degreeList = ["AS", "CS", "BS"];   
         // show course description according to the course selected
         function showDescription(courseID){
             var ID = courseID.id;
@@ -27,8 +24,7 @@
             var file=dir + ID +".html";
             $("#iframe_couredescription").attr("src", file );
 
-        }
-        
+        }       
         function showDegrees(){
             removeArea();
             showArea();
@@ -61,14 +57,12 @@
                     );	
                 });		
             });
-        }
-        
+        }       
         function showArea(){
             var div = $("<div></div>");
             div.attr("id", "showarea");
             $("#leftmenuinner").append(div);
-        }
-        
+        }       
         function removeArea(){
             $("#showarea").remove();
         }
@@ -92,24 +86,25 @@
             </ul>
         </div>
     </div>	   
-    
-    <div id="sidenav" class="sidenav">
-        <div id="leftmenu" class="leftmenu">
-            <div id="leftmenuinner">
-                <h2 onclick="showDegrees();">Course Degrees</h2>
-                <h2>Course List of <span id="courseList"></span></h2>
+    <div id="sidenav" class="sidenav" style="top: 112px;">
+            <div id="leftmenu" class="leftmenu">
+                <div id="leftmenuinner">
+                    <h2 style="text-align:center" onclick="showDegrees();">Course Degrees</h2>
+                    <h2 style="text-align:center" >Course List of <span id="courseList"></span></h2>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="belowtopnav" style="margin-left:220px; padding-top: 0px;">
+            <!-- show description dynamically-->
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8" id="showDescription"><iframe id="iframe_couredescription"></iframe></div>
+                <div class="col-sm-2"></div>
             </div>
 
         </div>
-    </div>
-    
-    <div id="belowtopnav" style="margin-left:220px; padding-top: 0px;">
-        <!-- show description dynamically-->
-        <div id="showDescription">
-                <iframe id="iframe_couredescription"></iframe>
-        </div>
-    </div>
-
 
     <div id="footer">
         <hr>
