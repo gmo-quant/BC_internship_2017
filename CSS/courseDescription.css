@@ -1,4 +1,4 @@
-.topnav {
+#topnav {
     position: relative;
     z-index: 2;
     font-size: 17px;
@@ -33,9 +33,9 @@ li a:hover {
     color: #fff;
 }
 
-.sidenav {
+#sidenav {
     height: 100%;
-    width: 200px;
+    width: 25%;
     background-color: #fff;
     position: fixed!important;
     z-index: 1;
@@ -63,4 +63,14 @@ li a:hover {
 
 .sidenav a{
     display: block;
+}
+
+#belowtopnav{
+    
+}
+
+iframe{
+    float:left;
+    height:100%;
+    width:100%;
 }
