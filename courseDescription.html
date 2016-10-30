@@ -30,23 +30,30 @@
         }
         
         function showDegrees(){
+            removeArea();
+            showArea();
             // append option to select list dynamically
             $(document).ready(function(){	
                 $.each(degreeList, function(index, value){
-                    $("#leftmenuinner").append(
+                    $("#showarea").append(
                             $("<a></a>").attr("id",value)
                             .attr("href","javascript:void();")
-                            .attr("onclick","javascript:showCourses();")
+                            .attr("onclick","javascript:showCourses(this.id);")
                             .text(value)
                     );	
                 });		
             });
         }
-        function showCourses(){
+        function showCourses(degree){
+            $(document).ready(function(){
+                $("#courseList").text(degree);
+            });
+            removeArea();
+            showArea();
             // append option to select list dynamically
-            $(document).ready(function(){	
+            $(document).ready(function(){
                 $.each(courseList, function(index, value){
-                    $("#leftmenuinner").append(
+                    $("#showarea").append(
                             $("<a></a>").attr("id",value)
                             .attr("href","javascript:void();")
                             .attr("onclick","javascript:showDescription(this);")
@@ -54,6 +61,16 @@
                     );	
                 });		
             });
+        }
+        
+        function showArea(){
+            var div = $("<div></div>");
+            div.attr("id", "showarea");
+            $("#leftmenuinner").append(div);
+        }
+        
+        function removeArea(){
+            $("#showarea").remove();
         }
         </script>
 
@@ -80,7 +97,7 @@
         <div id="leftmenu" class="leftmenu">
             <div id="leftmenuinner">
                 <h2 onclick="showDegrees();">Course Degrees</h2>
-                <h2>Course List</h2>
+                <h2>Course List of <span id="courseList"></span></h2>
             </div>
 
         </div>
