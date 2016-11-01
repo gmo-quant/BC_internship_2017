@@ -13,57 +13,91 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
-        // retrive course list 	
+        // retrive course list; merge PHP code later	
 	//store course list in array
-	var courseList = ["ENC1101", "MAC1105", "CIS1000C", "COP1210C"];
-        var degreeList = ["AS", "CS", "BS"];   
-        // show course description according to the course selected
-        function showDescription(courseID){
-            var ID = courseID.id;
-            var dir = "courseDescription/";
-            var file=dir + ID +".html";
-            $("#iframe_couredescription").attr("src", file );
+	var courseList = ["CAP2760C","CDA2332C","CDA4411","CEN4341","CEN4722","CET1600C","CET1610C","CET1615C","CET1620C","CET1630C","CET2625C","CET2627C","CET2628C","CET2688C","CET3660C","CGS1060C","CGS1510C","CGS1540C","CGS1557C","CGS2100C","CIS1000C","CIS2028","CIS2352C","CIS2359C","CIS2910C","CIS2949","CIS3347C","CIS4253","CIS4361","CIS4596","CNT3014C","CNT3504C","CNT3604","CNT3702","CNT3721C","CNT4422C","COP1000C","COP1210C","COP1258C","COP1334C","COP1702C","COP2071C","COP2111C","COP2171C","COP2222C","COP2335C","COP2360C","COP2361C","COP2658C","COP2660C","COP2800C","COP2821C","COP2940","COP4858","CTS1106C","CTS1111C","CTS1133C","CTS1134C","CTS1212C","CTS1214C","CTS1390C","CTS1391C","CTS1392C","CTS1806C","CTS1808C","CTS1851C","CTS2120C","CTS2131C","CTS2148C","CTS2156C","CTS2314C","CTS2383C","CTS2393C","CTS2394C","CTS2395C","CTS2396C","CTS2420C","CTS2434C","CTS2437C","CTS2438C","CTS2441C","CTS2442C","CTS2445C","CTS2446C","CTS2451C","CTS2464C","CTS2651C","CTS2652C","CTS2852C","CTS2854","CTS2857C","CTS2858C","CTS3393C","CTS3394C","CTS3660C","CTS4339C","CTS4375C","CTS4395C","CTS4396C","CTS4627C","CTS4628C","ISM2311C","ISM4480C"];
+        var degreeList = ["Computer Science", "CS", "BS"];   
 
-        }       
-        function showDegrees(){
-            removeArea();
-            showArea();
-            // append option to select list dynamically
+        //when "course Description" was chosen, show a list of Degrees
+        // "course Description" is a general and public view of entire courses BC provided
+        function displayDegreeList(){
+            //clean the area
+            $("#courseIDs").remove();
+            $("#backDL").remove();
+            // display the head of degree list
+            var h2 = $("<h2></h2>");
+            h2.css("text-align", "center");
+            h2.text("Degrees List");
+            h2.attr("id","DegreeList");
+
+            $("#leftmenuinner").append(h2);
+            removeDisplayArea();
+            displayArea();
+            //display a lsit of degrees
             $(document).ready(function(){	
-                $.each(degreeList, function(index, value){
+                $.each(degreeList, function(index, degree){
                     $("#showarea").append(
-                            $("<a></a>").attr("id",value)
+                            $("<a></a>").attr("id",degree)
                             .attr("href","javascript:void();")
-                            .attr("onclick","javascript:showCourses(this.id);")
-                            .text(value)
+                            .attr("onclick","javascript:displayCourseList(this.id);")
+                            .text(degree)
                     );	
                 });		
             });
         }
-        function showCourses(degree){
-            $(document).ready(function(){
-                $("#courseList").text(degree);
+        //after select a Degree program, list courses needed for the program
+        function displayCourseList(degree){
+            $("#DegreeList").remove();
+            var h2 = $("<h5></h5>");
+            h2.css("text-align", "left");
+            h2.text("back to degree list ");
+            h2.attr("id","backDL");
+            h2.click(function(){
+                displayDegreeList();
             });
-            removeArea();
-            showArea();
-            // append option to select list dynamically
+            $("#leftmenuinner").append(h2);
+            //display the head of the course list
+            h2 = $("<h2></h2>");
+            h2.css("text-align", "center");
+            h2.text("Course List of ");
+            h2.attr("id","courseIDs");
+            var span = $("<span></span>")
+            span.attr("id","courseList");
+            h2.append(span);
+            $("#leftmenuinner").append(h2);
+            
+            $("#courseList").text(degree);
+            removeDisplayArea();
+            displayArea();
+
             $(document).ready(function(){
                 $.each(courseList, function(index, value){
                     $("#showarea").append(
                             $("<a></a>").attr("id",value)
                             .attr("href","javascript:void();")
-                            .attr("onclick","javascript:showDescription(this);")
+                            .attr("onclick","javascript:displayDescription(this);")
                             .text(value)
                     );	
                 });		
             });
-        }       
-        function showArea(){
+        }   
+        function showProgramMaps(){
+
+        }
+        // show course description with responding course selected
+        function displayDescription(courseID){
+            var ID = courseID.id;
+            var dir = "courseDescription/";
+            var file=dir + ID +".html";
+            $("#iframe_couredescription").attr("src", file );
+        }   
+        
+        function displayArea(){
             var div = $("<div></div>");
             div.attr("id", "showarea");
             $("#leftmenuinner").append(div);
         }       
-        function removeArea(){
+        function removeDisplayArea(){
             $("#showarea").remove();
         }
         </script>
@@ -73,24 +107,23 @@
 <body>
     <div>
         <div>
-            <h1>Course Description</h1>
+            <h1 style="position: fiexd;">Course Description</h1>
         </div>
     </div>
     
     <div class="topnav" id="topnav" style="position: relative; top:0px;">
         <div style="overflow:auto">
             <ul style="width:55%;height:44px">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Course Description</a></li>
-                <li><a href="#">Degree Programs</a></li>
+                <li><a href="javascript:void();">Home</a></li>
+                <li><a href="javascript:void();" onclick="javascript:displayDegreeList();">Course Description</a></li>
+                <li><a href="javascript:void();" onclick="javascript:displayProgramMaps();">Program Maps</a></li>
             </ul>
         </div>
     </div>	   
     <div id="sidenav" class="sidenav" style="top: 112px;">
             <div id="leftmenu" class="leftmenu">
                 <div id="leftmenuinner">
-                    <h2 style="text-align:center" onclick="showDegrees();">Course Degrees</h2>
-                    <h2 style="text-align:center" >Course List of <span id="courseList"></span></h2>
+                    <div id ="leftmenuinnerinner"></div>
                 </div>
 
             </div>

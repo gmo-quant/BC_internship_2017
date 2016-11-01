@@ -44,7 +44,6 @@ li a:hover {
 .leftmenu{
     height: 100%;
     width: 100%;
-    overflow-y: scroll;
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -53,6 +52,7 @@ li a:hover {
     top: 0;
     padding-top: 112px;
     padding-bottom: 0;
+    overflow-y: scroll;
     height: 100%;
     width: 220px;
     background-color: transparent;
