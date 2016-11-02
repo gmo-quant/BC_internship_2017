@@ -1,8 +1,7 @@
 <div id="top" class="container">
     <div class="center padding-16">
-        <h1>Course Description</h1>
-    </div>
-    
+        <h1>Broward College Career Path Dashboard(CS)</h1>
+    </div>    
     <div id="topnav" class="topnav padding-16"  style="position: relative; top:12px;">
         <div style="overflow:auto">
             <ul style="width:100%;height:54px">
