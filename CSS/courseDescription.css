@@ -1,0 +1,58 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 2, 2016, 8:28:28 AM
+    Author     : GWONGZAN
+*/
+
+#sidenav {
+    height: 100%;
+    width: 25%;
+    background-color: #fff;
+    position: fixed!important;
+    top:120px;
+    z-index: 1;
+    overflow: auto;
+}
+.leftmenu{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    padding-top: 120px;
+}
+#leftmenuinner{
+    position: fixed;
+    top: 120px;
+    padding-top: 112px;
+    padding-bottom: 0;
+    overflow-y: scroll;
+    height: 100%;
+    width: 260px;
+    background-color: transparent;
+}
+#sidenav a {
+    padding: 2px 1px 1px 16px;
+}
+
+.sidenav a{
+    display: block;
+}
+a{
+    display: block;
+}
+#belowtopnav{
+    
+}
+#rightframe{
+    float: right;
+}
+
+
+
+.padding-16{
+    padding-top: 16px!important;
+    padding-bottom: 16px!important;
+}
