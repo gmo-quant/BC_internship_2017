@@ -28,10 +28,7 @@
             <iframe id="displayDescription" src=""></iframe>
         </div>
     </div>
-</div>
-        
-        
-        
+</div>      
 <?php
 require 'footer.php';
 ?>
