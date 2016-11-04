@@ -9,6 +9,7 @@
 ?>
         <link rel="stylesheet" href="CSS/programMaps.css">
         <script src="js/programMaps.js"></script>
+        <script src="js/courseDescription.js"></script>
         <script>
         function displayTime(str) {
           if (str=="") {
@@ -32,12 +33,8 @@
 </script>
     </head>
     <body>
-        <form>
-            <input id="partTime" type="button" value="partTime" onclick="displayTime(this.value)">
-            <input id="fullTime" type="button" value="fullTime" onclick="displayTime(this.value)">
-        </form>
-        
-        
+        <input id="partTime" type="button" value="partTime" onclick="displayTime(this.value)">
+        <input id="fullTime" type="button" value="fullTime" onclick="displayTime(this.value)">
         <div id="careerPath"></div>
     </body>
 </html>

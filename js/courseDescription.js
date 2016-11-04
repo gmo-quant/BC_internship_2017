@@ -59,6 +59,6 @@ function displayCourses(degree){
 
 function displayCourse(course){
     var dir = "courseDescription/";
-    var file = dir + course + ".html"
+    var file = dir + course + ".html";
     $("#displayDescription").attr("src",file);
 }
