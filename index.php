@@ -10,7 +10,11 @@
 <?php
     require 'header.php';
 ?>
-        <p class="padding-16 center">this is home page</p>        
+        
+        <div class="container padding-16">
+            <p class="padding-16 center">this is home page</p>  
+        </div>
+              
 <?php
 require 'footer.php';
 ?>

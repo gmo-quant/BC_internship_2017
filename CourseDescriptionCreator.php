@@ -50,54 +50,63 @@ $endHint = '/<!-- <br\/><a href="http:\/\/www.curricunet.com\/broward\/search\/c
 $headerB4title = "<!DOCTYPE html><html>  <head>";  
 $title = "";
 $headerAfterTitle = " 
-               <meta charset='utf-8'>
-                    <link href='../styles.css' rel='stylesheet' type='text/css' />
+		   <meta charset='utf-8'>
+			<link href='../styles.css' rel='stylesheet' type='text/css' />
+				
+        <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
+        
+			      <link href='bootstrap-3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
+				   <script src='bootstrap-3.3.7/js/bootstrap.min.js' type='text/javascript'></script>
+           		<script src='js/jquery-3.1.1.min' type='text/javascript'></script>
+                <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+                    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>	
 
-    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
+			
+	</head>
 
-                          <link href='bootstrap-3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css' />
-                               <script src='bootstrap-3.3.7/js/bootstrap.min.js' type='text/javascript'></script>
-                    <script src='js/jquery-3.1.1.min' type='text/javascript'></script>
-            <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-                <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>			
-
-                      <style type='text/css'>
-                        footer{
-                          background-color: #002e52;
-                          color: white;
-                        }   
-             </style>
-    </head>
-
-                            <body>
-
-                            <header>
-
-      <img src='../images/Broward_College_Logo.png' alt='BC Logo'>
-      </header>
-                                    <h1>Computer Science Department</h1>
-
-                                    <nav class='navbar navbar-inverse'>
-            <div class='container-fluid'>
-
-              <ul class='nav nav-pills'>
-
-                <li><a href='index.html'>Home</a></li>
-                    <li><a href='#'>Degree and Certificates</a></li>
-                        <li class='dropdown'>
-                          <li><a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false'>Program Map<span class='caret'></span></a></li>
-                     <ul class='dropdown-menu'>
-                    <li><a href='#'>Computer Programming and Analysis</a></li>
-                    <li><a href='#'>TC 1</a></li>
-                    <li><a href='#'>TC 2</a></li>
+				<body>
+				
+				<header>
+                
+          <img src='../images/Broward_College_Logo.png' alt='BC Logo'>
+          </header>
+					<h1>Computer Science Department</h1>
+				
+					<nav class='navbar navbar-inverse'>
+                <div class='container-fluid'>
+                  
+                  <ul class='nav nav-pills'>
+                    <li class='active'><a href='index.html'>Home</a></li>
+                        
+                  
+            
+                   
+                          
+                      <li class='dropdown'>
+						  <a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Program Map <span class='caret'></span></a>
+						  <ul class='dropdown-menu'>
+							<li><a href='#'>Computer Programming and Analysis AS</a></li>
+							<li><a href='#'>Computer Programmer TC</a></li>
+							<li><a href='#'>Computer Programming Specialist TC</a></li>
+							</ul>
+						</li>
+						
+						<li class='dropdown'>
+						  <a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>General Education Courses <span class='caret'></span></a>
+						  <ul class='dropdown-menu'>
+							<li><a href='#'>Humanities</a></li>
+							<li><a href='#'>Social/Behavioral Science</a></li>
+							<li><a href='#'>Sciences</a></li>
+						  </ul>
+						</li>
+						
+						
+					 
+					  
+                    <li><a href='certsandcareers.html'>Certifications & Careers</a></li>
                   </ul>
-
-
-                <li><a href='certsandcareers.html'>Certifications & Careers</a></li>
-              </ul>
-            </div>
-          </nav>
-
+                </div>
+              </nav>
           ";
 
 $footer = "		<br />

@@ -26,37 +26,50 @@ echo "<table>
 <th>course Name</th>
 </tr>";
 
-$courseID = array("COP1210C","CTS2438C","COP2071C", "COP1334C");
+$courseIDs = array("COP1210C","CTS2438C","COP2071C", "COP1334C");
 $courseName = "courseName";
-
-if($_GET["q"] == "partTime"){
+$courseID = filter_input(INPUT_GET, "q");
+if($courseID == "partTime"){
     echo "<tr>";
     echo "<td rowspan='2'>". "1". "</td>";
-    echo "<td><a href='#' id ='". $courseID[0]. "'  onclick='displayCourse(this.id)'>" . $courseID[0] . "</a></td>";
+    echo "<td><a href='#' id ='". $courseIDs[0]. "'  onclick='displayCourse(this.id)'>" . $courseIDs[0] . "</a></td>";
     echo "<td>" . $courseName . "</td>";
     echo "</tr>";
     
     echo "<tr>";
-    echo "<td><a href='#' id='" . $courseID[1] ."' onclick='displayCourse(this.id)'>". $courseID[1]. "</a></td>";
+    echo "<td><a href='#' id='" . $courseIDs[1] ."' onclick='displayCourse(this.id)'>". $courseIDs[1]. "</a></td>";
     echo "<td>" . $courseName . "</td>";
     echo "</tr>";
     
     echo "<td rowspan='2'>". "2" . "</td>";
-    echo "<td><a href='#' id='" . $courseID[2] ."' onclick='displayCourse(this.id)'>". $courseID[2]. "</a></td>";
+    echo "<td><a href='#' id='" . $courseIDs[2] ."' onclick='displayCourse(this.id)'>". $courseIDs[2]. "</a></td>";
     echo "<td>" . $courseName . "</td>";
     echo "</tr>";
     
     echo "<tr>";
-    echo "<td><a href='#' id='" . $courseID[3] ."' onclick='displayCourse(this.id)'>". $courseID[3]. "</a></td>";
+    echo "<td><a href='#' id='" . $courseIDs[3] ."' onclick='displayCourse(this.id)'>". $courseIDs[3]. "</a></td>";
     echo "<td>" . $courseName . "</td>";
     echo "</tr>";
 }else {
     echo "<tr>";
     echo "<td rowspan='4'>". "1". "</td>";
-    echo "<td>" . $courseID[0] . "</td>";
-    echo "<td>" . $courseID[1] . "</td>";
-    echo "<td>" . $courseID[2] . "</td>";
-    echo "<td>" . $courseID[3] . "</td>";
+    echo "<td><a href='#' id ='". $courseIDs[0]. "'  onclick='displayCourse(this.id)'>" . $courseIDs[0] . "</a></td>";
+    echo "<td>" . $courseName . "</td>";
+    echo "</tr>";
+    
+    echo "<tr>";
+    echo "<td><a href='#' id ='". $courseIDs[1]. "'  onclick='displayCourse(this.id)'>" . $courseIDs[1] . "</a></td>";
+    echo "<td>" . $courseName . "</td>";
+    echo "</tr>";
+    
+    echo "<tr>";
+    echo "<td><a href='#' id ='". $courseIDs[2]. "'  onclick='displayCourse(this.id)'>" . $courseIDs[2] . "</a></td>";
+    echo "<td>" . $courseName . "</td>";
+    echo "</tr>";
+    
+    echo "<tr>";
+    echo "<td><a href='#' id ='". $courseIDs[3]. "'  onclick='displayCourse(this.id)'>" . $courseIDs[3] . "</a></td>";
+    echo "<td>" . $courseName . "</td>";
     echo "</tr>";
 }
 echo "</table>";
