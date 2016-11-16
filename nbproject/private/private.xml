@@ -3,8 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/001NetbeansProjects/PHP/BC_intern/CourseDescriptionCreator.php</file>
-            <file>file:/D:/001NetbeansProjects/PHP/BC_intern/courseDescription.php</file>
+            <file>file:/D:/001NetbeansProjects/PHP/BC_intern/navigation.php</file>
+            <file>file:/D:/001NetbeansProjects/PHP/BC_intern/programMaps.php</file>
+            <file>file:/D:/001NetbeansProjects/PHP/BC_intern/consequence.php</file>
+            <file>file:/D:/001NetbeansProjects/PHP/BC_intern/tools/CourseDescriptionCreator.php</file>
+            <file>file:/D:/001NetbeansProjects/PHP/BC_intern/degreeProgramFrame.php</file>
+            <file>file:/D:/001NetbeansProjects/PHP/BC_intern/displayCourse.php</file>
+            <file>file:/D:/001NetbeansProjects/PHP/BC_intern/js/navigation.js</file>
+            <file>file:/D:/001NetbeansProjects/PHP/BC_intern/HC.php</file>
+            <file>file:/D:/001NetbeansProjects/PHP/BC_intern/js/programMaps.js</file>
+            <file>file:/D:/001NetbeansProjects/PHP/BC_intern/tools/filterCourseTitle.php</file>
         </group>
     </open-files>
 </project-private>

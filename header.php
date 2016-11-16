@@ -6,7 +6,13 @@
     </div>
 </div>
 <div> 
-    <h1 class="center">Computer Science Department</h1>
+ <h1 class="center padding-16">
+     <?php 
+        echo $title;
+     ?>
+ </h1>
+
+
 </div>  
 
 <?php

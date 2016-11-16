@@ -7,7 +7,7 @@
 
 <?php
 $courseID = filter_input(INPUT_GET, "q");
-$dir = "courseDescription/";
+$dir = "./courseDescription/";
 $file = $dir . $courseID . ".html";
 $str = file_get_contents($file);
 echo $str;

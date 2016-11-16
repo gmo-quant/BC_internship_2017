@@ -141,8 +141,9 @@ foreach($courseIDs as $courseID){
     $strLen = $strEnd - $strStart;
     $table = substr($str, $strStart, $strLen);
     
-    $save = $headerB4title. $title. $headerAfterTitle. $table. $footer;
-    $file = './courseDescription/'.$courseID.'.html';
+//    $save = $headerB4title. $title. $headerAfterTitle. $table. $footer;
+    $save = $table;
+    $file = './../courseDescription/'.$courseID.'.html';
     file_put_contents($file, $save);
 }
 ?>

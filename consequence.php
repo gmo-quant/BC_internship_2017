@@ -26,7 +26,7 @@ echo "<table>
 <th>course Name</th>
 </tr>";
 
-$courseIDs = array("COP1210C","CTS2438C","COP2071C", "COP1334C");
+$courseIDs = array( "ENC1101","MAC1105","SPC1024","SPC1608");
 $courseName = "courseName";
 $courseID = filter_input(INPUT_GET, "q");
 if($courseID == "partTime"){
@@ -41,6 +41,7 @@ if($courseID == "partTime"){
     echo "<td>" . $courseName . "</td>";
     echo "</tr>";
     
+    echo "<tr>";
     echo "<td rowspan='2'>". "2" . "</td>";
     echo "<td><a href='#' id='" . $courseIDs[2] ."' onclick='displayCourse(this.id)'>". $courseIDs[2]. "</a></td>";
     echo "<td>" . $courseName . "</td>";

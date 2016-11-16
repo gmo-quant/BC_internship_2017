@@ -8,7 +8,7 @@
 
 function displayTime(str) {
   if (str==="") {
-    document.getElementById("careerPath").innerHTML="";
+    document.getElementById("consequence").innerHTML="";
     return;
   } 
   if (window.XMLHttpRequest) {
@@ -19,10 +19,10 @@ function displayTime(str) {
   }
   xmlhttp.onreadystatechange=function() {
     if (this.readyState===4 && this.status===200) {
-      document.getElementById("careerPath").innerHTML=this.responseText;
+      document.getElementById("consequence").innerHTML=this.responseText;
     }
   };
-  xmlhttp.open("GET","careerPath.php?q="+str,true);
+  xmlhttp.open("GET","consequence.php?q="+str,true);
   xmlhttp.send();
 }
 
