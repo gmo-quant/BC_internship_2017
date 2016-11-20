@@ -1,0 +1,9 @@
+--index.php
+	a list of mock links with argument destinate to a target degree program page
+--degreeProgramFrame.php
+	a general frame for displaying information about each degree program.
+	each degree program shares the same structure for displaying their specific
+	content.
+--/programDescription/
+	floder to store php files that describes each degree program
+

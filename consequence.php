@@ -18,7 +18,7 @@ th {text-align: left;}
 <body>
 
 <?php
-
+// display the program map for part time/full time recommended pathway
 echo "<table>
 <tr>
 <th>term</th>

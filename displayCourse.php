@@ -6,6 +6,9 @@
 <body>
 
 <?php
+
+// when user select a course for the list, 
+//display course description on the other side.
 $courseID = filter_input(INPUT_GET, "q");
 $dir = "./courseDescription/";
 $file = $dir . $courseID . ".html";

@@ -6,17 +6,9 @@
     </div>
 </div>
 <div> 
- <h1 class="center padding-16">
-     <?php 
-        echo $title;
-     ?>
- </h1>
-
-
-</div>  
-
-<?php
-    require 'navigation.php';
-?>
-				
-					
+    <h1 class="center padding-16">
+        <?php 
+           echo $title;
+        ?>
+    </h1>
+</div>  					
